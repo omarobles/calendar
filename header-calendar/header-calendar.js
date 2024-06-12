@@ -10,7 +10,6 @@ export default class HeaderCalendar extends HTMLElement {
     }
 
     render() {
-        // console.log("HeaderCalendar");
         this.shadowRoot.innerHTML =
             `
             <link rel="stylesheet"

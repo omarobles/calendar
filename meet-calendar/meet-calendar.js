@@ -9,7 +9,6 @@ export default class MeetCalendar extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        // this.addButtonListeners();
     }
 
     addButtonListeners() {
@@ -25,7 +24,6 @@ export default class MeetCalendar extends HTMLElement {
                 if (input.value !== "") {
                     this.todo[id].push(input.value);
                 }
-                // console.log(this.todo);
                 input.value = "";
                 this.render();
             });

@@ -10,26 +10,20 @@ export default class MainCalendar extends HTMLElement {
 
     connectedCallback() {
         this.render();
-
-        // const inputs = meetCalendar.querySelector('.calendar').querySelectorAll('button');
-        // console.log(inputs);
     }
 
     addButtonListener() {
         const headerCalendar = this.shadowRoot.querySelector('header-calendar');
         const button = headerCalendar.shadowRoot.querySelector('.today');
-        // console.log(button);
         button.addEventListener('click', () => {
             const meetCalendar = this.shadowRoot.querySelector('meet-calendar');
             const calendar = meetCalendar.shadowRoot.querySelector('.calendar');
             const divDia = calendar.querySelector(`#dia${this.diaActual}`);
             divDia.style.background = "#E3EEFC";
-            // console.log(divDia);
         })
     }
 
     render() {
-        // console.log("Main-calendar");
         this.shadowRoot.innerHTML = `
         <style>
             header{
